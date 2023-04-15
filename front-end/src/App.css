@@ -1,0 +1,433 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Login page css */
+.login-container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,#D30000 30%,#FD001E 60%,#FF003D 90%);
+    display: grid;
+    place-items: center;
+}
+
+.login-container .login-form-container{
+    width: 30%;
+    height: 40%;
+    background-color: rgb(0, 0, 0,36%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+}
+
+.login-container .login-form-container h1{
+    color: #FF0000;
+    font-size: 2.5em;
+}
+
+.login-container .login-form-container hr{
+    width: 43%;
+    height:0.2em;
+    background:rgb(255, 255, 255,23%);
+    border: none;
+    margin: 5px 0px;
+}
+
+.login-container .login-form-container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container .login-form-container form .form-item{
+    width: 85%;
+    margin: 5px 5px;
+}
+
+.login-container .login-form-container form .form-item *{
+    width: 100%;
+    /* font-size: 1em; */
+    font-weight: 600;
+    color:#fff;
+}
+
+.login-container .login-form-container form .username-container{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.login-container .login-form-container form h4{
+    color: #fff;
+    margin: 15px 0px;
+}
+
+.login-container .login-form-container form h4:hover{
+    color: #1c51ff;
+    cursor: pointer;
+}
+
+.login-container .login-form-container form button{
+    background-color: #FF0000;
+    width: 80%;
+    height: 15%;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.app{
+    height: 100vh;
+    width: 100%;
+    background-color: #F1F3F2;
+}
+/* Navbar css*/
+
+.navbar{
+    width:100vw;
+    height: 7vh;    
+    background-color: #fff;
+}
+
+.navigation-buttons{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar .nav-container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height:100%;
+}
+
+.navbar .nav-container .logo-container{
+    margin: 0px 30px;
+    cursor: pointer;
+}
+
+.navbar .nav-container .logo-container h1{
+    font-size: 1.6em;
+    color: #A90000;
+}
+
+.navbar .nav-container .nav-home-container{
+    margin:0px 15px;
+    cursor: pointer;
+    width: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar .nav-container .nav-home-container {
+    color:black; 
+}
+
+.navbar .nav-container .nav-home-container:hover{
+    color:blue;
+}
+
+.navbar .nav-container .add-answer-container{
+    margin:0px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar .nav-container .add-answer-container:hover{
+    color:blue;
+}
+
+.navbar .nav-container .search-bar-container{
+    display: flex;
+    align-items: center;
+    margin:0px 15px;    
+    border:0.1px solid black;
+    transition: all 0.4s;
+}
+
+.navbar .nav-container .search-bar-container.active{
+    border:none;
+    box-shadow: 3px 3px 5px black;
+    transform:translateY(2);
+    height: 2rem;
+}
+
+.navbar .nav-container .search-bar-container input{
+    width:25rem;
+    outline: none;
+    border:none;
+    height: 1.7rem;
+    padding-left: 5px;
+}
+
+.navbar .nav-container .user-avatar{
+    width: 45px;
+    height: 70%;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+.navbar .nav-container .user-avatar:hover{
+    background-color:black;
+    color:#fff;
+}
+
+.navbar .nav-container button{
+    cursor: pointer;
+    width: 10rem;
+    height: 50%;
+    border: none;
+    border-radius: 15px;
+    margin: 0px 15px;
+    background-color: #A90000;
+    font-weight: 500;
+    color: #fff;
+}
+
+.navbar .nav-container button:hover{
+    background-color: #ff0000;
+    color:#fff;
+}
+
+.navbar .nav-container .logout{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.navbar .nav-container .logout:hover{
+    color: #ff0000;
+}
+/* main body css */
+
+.home-container {
+    width: 100%;
+    height: 93vh;
+    position: absolute;
+}
+
+.home-main-container{
+    /* background-color: #1c51ff; */
+    display: grid;
+    grid-template-columns: 65% 35%;
+    height: 100%;
+    margin: 0px 14rem;
+    gap: 1.5rem;
+}
+
+.home-main-container section{
+    width: 100%;
+    height: 93%;
+    margin-top: 20px;
+}
+
+.home-main-container .home-quest-continer{
+    width: 100%;
+    height: 93%;
+    overflow-y: auto;
+}
+
+.home-main-container .home-quest-continer::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+.home-main-container section .home-quest-scroll{
+    width: 100%;
+}
+.home-main-container section .home-quest-scroll::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+.home-main-container section .home-quest-scroll::-webkit-scrollbar-thumb{
+    width: 0px;
+    background: transparent;
+}
+
+/* Questions page css */
+.questions-main-container{
+    margin:0px 24vw;
+    position: absolute;
+}
+
+.questions-main-container section{
+    margin-top: 20px;
+    height: 85vh;
+    overflow-y: auto;
+}
+
+.questions-main-container section::-webkit-scrollbar{
+    background: transparent;
+}
+
+.questions-main-container section .question-box{
+    margin:20px 0px;
+    background-color: #fff;
+    padding: 10px;
+    width:850px;
+}
+
+/* Question page css */
+
+.question-main-container{
+    margin:0px 15vw;
+    width:70%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+}   
+
+
+.question-main-container section {
+    width:100%;
+}
+
+.question-main-container section .question-box{
+    margin-top:20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.question-main-container section .answer-holder{
+    width:100%;
+    height:65vh;
+    margin-top: 10px;
+    background-color: #fff;
+    display:grid;
+    place-items: center;
+    grid-template-columns: 6% 94%;
+}
+
+.question-main-container section .answer-holder .answer-hr{
+    place-self: center;
+    margin: auto;
+    width:5px;
+    height:90%;
+    background-color: #7B7B7B;
+}
+
+.question-main-container section .answer-holder .answers-container{
+    align-self:baseline;
+    margin-top: 20px;
+    width:100%;
+    height: 90%;
+    overflow: auto;
+}
+
+.question-main-container section .answer-holder .answers-container::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+
+.question-main-container section .answer-holder .answers-container .answer{
+    width:97%;
+    margin: 15px 0px;
+}
+
+/* Profile css */
+
+.user-profile-container{
+    width: 100%;
+    height: 93vh;
+    display: grid;
+    place-items:center;
+    position: absolute;
+}
+
+.user-profile-container .user-profile-outer-container{
+    background-color: #fff;
+    height: 95%;
+    width: 70%;
+}
+
+/* Select Avatar css */
+
+.select-avatar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+}
+
+.select-avatar-container .select-avatar-header h3{
+    color:rgb(255, 255, 255,80%);
+    font-weight: 600;
+}
+
+.select-avatar-container .avatars-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+}
+
+.select-avatar-container .avatars-container .avatar{
+    background-color: #1c51ff;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin:20px 20px;
+    cursor: pointer;
+}
+
+.active-avatar{
+    background-color: red;
+    border: 3px solid #fff;
+}
+
+.select-avatar-container .selected-button button{
+    height: 2.2rem;
+    width: 150px;
+    font-size: medium;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #FF0000;
+    cursor: pointer;
+}
+
+.select-avatar-container .selected-button button:hover{
+    background-color: #e60000;
+}
+
+.no-data{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+    /* background-color: #1c51ff; */
+}
+
+.no-data h2{
+}
+
+img{
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 25vw;
+}
